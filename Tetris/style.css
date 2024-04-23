@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  padding: 16px;
+}
+
+.btn-container {
+  margin-bottom: 16px;
+  width: 280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-container button {
+  border: none;
+  background-color: brown;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 32px;
+  transition: filter 0.2;
+}
+
+.btn-container button:hover {
+  filter: brightness(0.8);
+}
+
+.content-container {
+  display: flex;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 400px;
+  background: yellowgreen;
+}
+
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.mini-grid {
+  width: 120px;
+  height: 120px;
+  background: yellowgreen;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mini-grid div {
+  width: 20px;
+  height: 20px;
+}
+
+.conten-right h3 {
+  font-size: 32px;
+  margin-top: 24px;
+}
+
+.shapePainted {
+  background: red;
+  border: 2px black solid;
+}
+
+.blue {
+  background: linear-gradient(to right, #0033cc, #99b3ff);
+}
+
+.yellow {
+  background: linear-gradient(to right, #ffcc00, #ffeb99);
+}
+
+.red {
+  background: linear-gradient(to right, #ff3300, #ff5c33, #ff8566);
+}
+
+.orange {
+  background: linear-gradient(to right, #b34700, #ff751a, #ff944d);
+}
+
+.pink {
+  background: linear-gradient(to right, #cc0099, #ff80ff, #ff99ff);
+}
+
+.mobile-btns-container {
+  margin-top: 20px;
+  max-width: 300px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 64px 64px;
+  gap: 12px;
+}
+
+.mobile-btns-container button {
+  background: linear-gradient(to right, #0033cc, #5c82f4);
+  border: none;
+  border-radius: 5px;
+}
+
+.mobile-btns-container button span {
+  color: white;
+  font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 990px) {
+  .mobile-btns-container {
+    display: grid;
+  }
+}
+
+@media (max-width: 470px) {
+  .content-right {
+    margin-left: 16px;
+  }
+  .conten-right h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .score {
+    display: block;
+  }
+}
